@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 17%;
+}
+
+.navbar.navbar-expand-lg {
+    background-color: #00000048 !important;
+    color: white !important;
+}
+
+#logo:hover {
+    color: var(--blue-color);
+    transform: scale(1.1)rotate(5deg);
+}
+
+#logo {
+    color: var(--orange-color);
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.navbar {
+    background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--blue-color);
+    font-size: 20px;
+    transition: 0.5s ease;
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: var(--orange-color);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--orange-color);
+    transform: scale(1.1);
+}
+
+.navbar .navbar-nav .nav-link.active:hover {
+    color: var(--blue-color);
+}
+
+.navbar .container .navbar-toggler {
+    border-color: var(--blue-color);
+    font-size: 25px;
+    color: var(--blue-color);
+}
+
+.navbar .container .navbar-toggler:hover {
+    color: var(--orange-color);
+    border-color: var(--orange-color);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+body,
+html,
+.wrap,
+.panel {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: rgb(255, 255, 255);
+}
+
+video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: skew(30deg, 15deg);
+    animation: rotate 20s ease-in-out infinite;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    0%,
+    100% {
+        transform: skew(10deg, 15deg);
+    }
+    50% {
+        transform: skew(-10deg, -15deg);
+    }
+}
+
+.b1 {
+    z-index: 2;
+    padding: 20px 40px;
+    border-radius: 40px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    transition: .5s;
+    position: absolute;
+    top: 60%;
+    left: 44%;
+}
+
+@keyframes topdown {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.b1:hover {
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
+    animation: topdown .5s linear infinite;
+}
+
+.wrap {
+    width: 500% !important;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1 .7em;
+}
+
+.progressbar {
+    width: 180%;
+    height: 10px;
+    border-radius: 0 100px 0 0;
+    position: relative;
+    display: inline-block;
+    background-color: rgb(21, 23, 24);
+}
+
+
+/* image slider section */
+
+.text-center {
+    overflow-y: hidden;
+}
+
+.swiper {
+    width: 100%;
+    position: relative;
+    top: 15%;
+    transform: rotateY(20deg);
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    margin-top: 30px;
+    width: 300px;
+    height: 350px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px 10px;
+    -webkit-bx-reflect: below 1px linear-gradient(black, transparent, rgba(255, 255, 255, 0.4));
+}
+
+.swiper-slide p {
+    color: white;
+}
+
+.swiper-slide button {
+    padding: 20px 100px;
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 40px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0px 0px;
+    clip-path: ellipse(250px 140px at 40% 30%);
+    -webkit-bx-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+}
+
+.swiper-slide:nth-child(1) {
+    margin-top: 900px;
+}
+
+.swiper-slide p {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card {
+    border-radius: 10px 10px;
+    max-width: fit-content;
+    background-color: black;
+    color: white;
+    clip-path: circle(70%);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    clip-path: ellipse(200px 140px at 40% 20%);
+}
+
+.btn.btn-warning {
+    padding: 20px 50px;
+    border-radius: 40px;
+}
